@@ -1,1 +1,1 @@
-Time taken to infer images: 62.106640338897705 seconds
+Time taken to infer images: 13.767124891281128 seconds
