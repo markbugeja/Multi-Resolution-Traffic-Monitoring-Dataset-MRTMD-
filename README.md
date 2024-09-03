@@ -126,7 +126,36 @@ The ground truth annotations are based on COCO format and include the following 
 
 When validating a model using this dataset, you can utilise `pycocotools`, a Python API for loading, parsing, and visualising annotations in COCO format. This tool facilitates the evaluation of model performance against the provided ground truth annotations.
 
-### Number Plate Recognition
+### Number Plate Recognition (NPR)
+
+#### How to Use the Dataset
+
+To use the dataset for Number Plate Recognition:
+
+1. Navigate to the `NPR` folder.
+2. Select the desired resolution folder (e.g., `2160p`, `1440p`, etc.).
+3. Inside each resolution folder, you will find the corresponding ground truth annotations.
+
+#### Ground Truth Annotations
+
+The ground truth for Number Plate Recognition is structured similarly to the COCO format but includes an additional parameter called `value`. An example annotation is shown below:
+
+```json
+{
+    "id": 3908,
+    "image_id": "127_cutout_3908",
+    "category_id": 3,
+    "bbox": [
+        0,
+        0,
+        103,
+        25
+    ],
+    "area": 2575,
+    "iscrowd": 0,
+    "value": "WGM7TU4"
+}
+
 
 
 
