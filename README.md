@@ -162,7 +162,7 @@ The ground truth for Number Plate Recognition is structured similarly to the COC
 ## Conclusion
 The Multi-Resolution Traffic Monitoring Dataset (MRTMD) distinguishes itself through several key strengths, making it a valuable resource for researchers and developers:
 
-- **Comprehensive Coverage:** With 4,062 images captured from varying camera angles, the dataset provides a detailed representation of real-world traffic conditions, supporting robust model evaluation.
+- **Comprehensive Coverage:** With 3,733 images captured from varying camera angles, the dataset provides a detailed representation of real-world traffic conditions, supporting robust model evaluation.
 
 - **Resolution Variability:** The inclusion of identical images at different resolutions allows for the assessment of model performance across various resolution settings. This feature is particularly useful for optimising models based on specific IP camera configurations.
 
