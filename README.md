@@ -155,7 +155,7 @@ The ground truth for Number Plate Recognition is structured similarly to the COC
     "iscrowd": 0,
     "value": "WGM7TU4"
 }
-
+```
 
 
 
