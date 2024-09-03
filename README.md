@@ -97,13 +97,6 @@ else:
 
 ```
 
-<!-- ## Citation
-To cite this paper, kindly use the following citation:
-
-```bib
-
-```
-
 ## How to Use the Dataset
 
 ### Dataset Structure
@@ -145,5 +138,14 @@ The ground truth annotations are based on COCO format and include the following 
 ### Model Validation
 
 When validating a model using this dataset, you can utilise `pycocotools`, a Python API for loading, parsing, and visualising annotations in COCO format. This tool facilitates the evaluation of model performance against the provided ground truth annotations.
+
+<!-- ## Citation
+To cite this paper, kindly use the following citation:
+
+```bib
+
+```
+
+
 
 
