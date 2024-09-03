@@ -104,5 +104,46 @@ To cite this paper, kindly use the following citation:
 
 ```
 
-The paper associated with the COTS dataset is available for free as an open-access paper on IEEE: https://ieeexplore.ieee.org/document/9340352 -->
+## How to Use the Dataset
+
+### Dataset Structure
+
+The `images` folder contains five subfolders, each with images of different resolutions:
+- `2160p`
+- `1440p`
+- `1080p`
+- `720p`
+- `480p`
+- `360p`
+
+### Ground Truth Annotations
+
+For each resolution, corresponding ground truth annotations can be found in the `ground_truth` folder. The annotation files are named according to their respective resolution sets, such as `groundtruth_2160p.json`.
+
+### COCO Categories
+
+The ground truth annotations are based on COCO format and include the following categories:
+- **Person**: 
+  - `id`: 1
+  - `supercategory`: person
+- **Bicycle**: 
+  - `id`: 2
+  - `supercategory`: vehicle
+- **Car**: 
+  - `id`: 3
+  - `supercategory`: vehicle
+- **Motorcycle**: 
+  - `id`: 4
+  - `supercategory`: vehicle
+- **Bus**: 
+  - `id`: 6
+  - `supercategory`: vehicle
+- **Truck**: 
+  - `id`: 8
+  - `supercategory`: vehicle
+
+### Model Validation
+
+When validating a model using this dataset, you can utilise `pycocotools`, a Python API for loading, parsing, and visualising annotations in COCO format. This tool facilitates the evaluation of model performance against the provided ground truth annotations.
+
 
