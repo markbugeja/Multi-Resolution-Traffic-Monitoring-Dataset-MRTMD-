@@ -58,21 +58,6 @@ Despite these meticulous pre-processing steps, our results indicated a significa
 
 The analysis further revealed that the smallest image dimensions where OCR could achieve an accuracy greater than 0.800 were 76x22 pixels at 2160p resolution. At lower resolutions, while some correct detections were noted, these were too sporadic and unreliable to be considered effective for practical use. The most accurately identified plate at 2160p, "WL0980G," was detected correctly only twice, and no correct detections were recorded at resolutions below this, underscoring the critical importance of high resolution for effective number plate recognition.
 
-## Conclusion
-The Multi-Resolution Traffic Monitoring Dataset (MRTMD) distinguishes itself through several key strengths, making it a valuable resource for researchers and developers:
-
-- **Comprehensive Coverage:** With 4,062 images captured from varying camera angles, the dataset provides a detailed representation of real-world traffic conditions, supporting robust model evaluation.
-
-- **Resolution Variability:** The inclusion of identical images at different resolutions allows for the assessment of model performance across various resolution settings. This feature is particularly useful for optimising models based on specific IP camera configurations.
-
-- **Model Efficiency Testing:** The dataset enables researchers to determine the optimal model for specific resolution constraints, ensuring effective performance in real-world applications.
-
-- **Stability Under Degraded Conditions:** The diversity in resolution makes the MRTMD an excellent tool for measuring model stability when camera feed quality degrades, a common issue in bandwidth-limited environments such as remote traffic monitoring or mobile settings.
-
-- **Versatility:** The variety in camera angles and resolutions makes the dataset suitable not only for object detection tasks but also for evaluating Optical Character Recognition (OCR) performance, especially in Number Plate Recognition (NPR) scenarios.
-
-- **Application Relevance:** These strengths collectively make the MRTMD dataset a critical resource for advancing research and development in fields that demand robust, adaptable, and efficient visual recognition systems for traffic monitoring.
-
 ## Accessing Dataset
 To access this dataset, kindly use the following code:
 
@@ -97,6 +82,100 @@ else:
 
 ```
 
+## How to Use the Dataset
+
+### Object Detection
+
+#### Dataset Structure
+
+The `images` folder contains five subfolders, each with images of different resolutions:
+- `2160p`
+- `1440p`
+- `1080p`
+- `720p`
+- `480p`
+- `360p`
+
+#### Ground Truth Annotations
+
+For each resolution, corresponding ground truth annotations can be found in the `ground_truth` folder. The annotation files are named according to their respective resolution sets, such as `groundtruth_2160p.json`.
+
+#### COCO Categories
+
+The ground truth annotations are based on COCO format and include the following categories:
+- **Person**: 
+  - `id`: 1
+  - `supercategory`: person
+- **Bicycle**: 
+  - `id`: 2
+  - `supercategory`: vehicle
+- **Car**: 
+  - `id`: 3
+  - `supercategory`: vehicle
+- **Motorcycle**: 
+  - `id`: 4
+  - `supercategory`: vehicle
+- **Bus**: 
+  - `id`: 6
+  - `supercategory`: vehicle
+- **Truck**: 
+  - `id`: 8
+  - `supercategory`: vehicle
+
+#### Model Validation
+
+When validating a model using this dataset, you can utilise `pycocotools`, a Python API for loading, parsing, and visualising annotations in COCO format. This tool facilitates the evaluation of model performance against the provided ground truth annotations.
+
+### Number Plate Recognition (NPR)
+
+#### How to Use the Dataset
+
+To use the dataset for Number Plate Recognition:
+
+1. Navigate to the `NPR` folder.
+2. Select the desired resolution folder (e.g., `2160p`, `1440p`, etc.).
+3. Inside each resolution folder, you will find the corresponding ground truth annotations.
+
+#### Ground Truth Annotations
+
+The ground truth for Number Plate Recognition is structured similarly to the COCO format but includes an additional parameter called `value`. An example annotation is shown below:
+
+```json
+{
+    "id": 3908,
+    "image_id": "127_cutout_3908",
+    "category_id": 3,
+    "bbox": [
+        0,
+        0,
+        103,
+        25
+    ],
+    "area": 2575,
+    "iscrowd": 0,
+    "value": "WGM7TU4"
+}
+```
+
+
+
+## Conclusion
+The Multi-Resolution Traffic Monitoring Dataset (MRTMD) distinguishes itself through several key strengths, making it a valuable resource for researchers and developers:
+
+- **Comprehensive Coverage:** With 3,733 images captured from varying camera angles, the dataset provides a detailed representation of real-world traffic conditions, supporting robust model evaluation.
+
+- **Resolution Variability:** The inclusion of identical images at different resolutions allows for the assessment of model performance across various resolution settings. This feature is particularly useful for optimising models based on specific IP camera configurations.
+
+- **Model Efficiency Testing:** The dataset enables researchers to determine the optimal model for specific resolution constraints, ensuring effective performance in real-world applications.
+
+- **Stability Under Degraded Conditions:** The diversity in resolution makes the MRTMD an excellent tool for measuring model stability when camera feed quality degrades, a common issue in bandwidth-limited environments such as remote traffic monitoring or mobile settings.
+
+- **Versatility:** The variety in camera angles and resolutions makes the dataset suitable not only for object detection tasks but also for evaluating Optical Character Recognition (OCR) performance, especially in Number Plate Recognition (NPR) scenarios.
+
+- **Application Relevance:** These strengths collectively make the MRTMD dataset a critical resource for advancing research and development in fields that demand robust, adaptable, and efficient visual recognition systems for traffic monitoring.
+
+
+
 <!-- ## Citation
 To cite this paper, kindly use the following citation:
 
@@ -104,5 +183,6 @@ To cite this paper, kindly use the following citation:
 
 ```
 
-The paper associated with the COTS dataset is available for free as an open-access paper on IEEE: https://ieeexplore.ieee.org/document/9340352 -->
+
+
 
