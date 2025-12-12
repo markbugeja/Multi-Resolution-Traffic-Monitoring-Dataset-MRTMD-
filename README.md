@@ -175,11 +175,20 @@ The Multi-Resolution Traffic Monitoring Dataset (MRTMD) distinguishes itself thr
 - **Application Relevance:** These strengths collectively make the MRTMD dataset a critical resource for advancing research and development in fields that demand robust, adaptable, and efficient visual recognition systems for traffic monitoring.
 
 
-
-<!-- ## Citation
+ ## Citation
 To cite this paper, kindly use the following citation:
 
 ```bib
+@ARTICLE{11071529,
+  author={Bugeja, Mark and Bartolo, Matthias and Montebello, Matthew and Seychell, Dylan},
+  journal={IEEE Access}, 
+  title={MRTMD: A Multi-Resolution Dataset for Evaluating Object Detection in Traffic Monitoring Systems}, 
+  year={2025},
+  volume={13},
+  number={},
+  pages={134460-134483},
+  keywords={Object detection;Monitoring;Image resolution;Accuracy;Detectors;Feature extraction;Proposals;Deep learning;Convolutional neural networks;Real-time systems;Dataset vehicle detection;high resolution image dataset;number plate recognition;computer vision},
+  doi={10.1109/ACCESS.2025.3585986}}
 
 ```
 
